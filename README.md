@@ -65,7 +65,7 @@ python3 brewgen.py -r /path/to/your/project -o /path/to/output/folder/project.rb
 | **--repo-dir**        | Location of where your repo is located. E.g. `/path/to/my/repo.` |
 | **--output** | Location of where to save ruby formula. Default: `output.rb` |
 | **--tag**     | Specific tag to use. Defaults to getting latest. |
-| **--model**  | Name of model. Defaults to `llama`. |
+| **--model**  | Name of model. Defaults to `llama3`. |
 
 ## Requirements
 
