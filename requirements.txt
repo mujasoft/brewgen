@@ -1,0 +1,6 @@
+# Core dependencies
+ollama
+requests
+typer[all]
+rich
+
