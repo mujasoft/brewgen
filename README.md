@@ -95,6 +95,9 @@ This project uses an LLM. Please review the generated formula manually before pu
 - Output is not always consistent even while using the same LLM.
 - Output is mostly correct. Manual verification is required.
 
+> TODO: `--verify` flag for automatic `brew audit` and local install testing.
+
+
 ## License
 
 MIT © Mujaheed Khan  
