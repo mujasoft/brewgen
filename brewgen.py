@@ -290,7 +290,7 @@ def get_ruby_formula(
                                                       " repo is cloned."),
                     output: str = typer.Option("output.rb", "--output", "-o",
                                                help="Location of where to save"
-                                                    "formula file."),
+                                                    " formula file."),
                     tag: str = typer.Option(None, "--tag", "-t",
                                             help="Release tag"),
                     model: str = typer.Option("llama3", "--model", "-m",
