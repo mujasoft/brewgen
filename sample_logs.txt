@@ -1,0 +1,29 @@
+Formula generation complete!
+
+
+╭───────────────────────── Ruby Formula for vid2gif ──────────────────────────╮
+│ class Vid2Gif < Formula                                                     │
+│   desc "Convert video files into optimized GIFs using FFmpeg"               │
+│   homepage "https://github.com/mujasoft/vid2gif"                            │
+│   sha256 "b48f6b71f1b8d698e25998dd8c5df8af093d63c2e067c4d1ccd9e360156a75da" │
+│                                                                             │
+│   url "https://github.com/mujasoft/vid2gif/archive/refs/tags/v1.0.1.tar.gz" │
+│   version "v1.0.1"                                                          │
+│   license "MIT"                                                             │
+│   language "bash"                                                           │
+│   depends_on "ffmpeg"                                                       │
+│                                                                             │
+│   def install                                                               │
+│     bin.install "vid2gif"                                                   │
+│   end                                                                       │
+│                                                                             │
+│   test do                                                                   │
+│     # Test command, for example:                                            │
+│     system "vid2gif -i input.mov -o output.gif"                             │
+│   end                                                                       │
+│ end                                                                         │
+╰────────────────────── LLM Powered Homebrew Generator ───────────────────────╯
+
+WARNING: Please double-check the generated formula — LLMs can make subtle mistakes.
+
+Output saved to: /Users/mujaheedkhan/Desktop/development/brewgen/vid2gif.rb
