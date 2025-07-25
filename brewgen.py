@@ -343,19 +343,21 @@ I have a command-line tool that I want to distribute via Homebrew.
 Please generate a valid Ruby formula for Homebrew using the information below:
 
 Folder Tree:
+----
 {folder_tree}
-
-- **Tool name**: <fill_it_in>
-- **Description**:
-___
+----
+README
+_____
 {readme_file_output}
-___
+_____
+- **Tool name**: <fill_it_in>
+- **Description**: <fill_it_in>
 - **Homepage**: https://github.com/{owner}/{repo}
 - **Source tarball URL**: https://github.com/{owner}/{repo}/archive/refs/tags/\
 {tag}.tar.gz
 - **SHA256**: {hash}
 - **License**: <fill_it_in>
-- **Language/Dependencies**: <fill_it_int>
+- **Language/Dependencies**: <fill_it_in>
 - **Install command**: <fill_it_in>
 - **Test command**: <fill_it_in>
 
@@ -375,7 +377,7 @@ Example formula class name should be `CamelCase(repo)`.
     results = send_prompt_to_LLM(prompt)
     ruby_str = extract_formula_from_response(results)
     if ruby_str:
-        console.print("[bold green]Formula generation complete![/]\n")
+        console.print("[bold green]Formula generation complete![/]")
     print()
     console.print(
                   Panel.fit(f"{ruby_str}",
