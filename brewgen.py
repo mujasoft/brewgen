@@ -291,7 +291,7 @@ def get_ruby_formula(
                     output: str = typer.Option("output.rb", "--output", "-o",
                                                help="Location of where to save"
                                                     " formula file."),
-                    tag: str = typer.Option(None, "--tag", "-t",
+                    tag: str = typer.Option('latest', "--tag", "-t",
                                             help="Release tag"),
                     model: str = typer.Option("llama3", "--model", "-m",
                                               help="Name of model.")
@@ -311,7 +311,7 @@ def get_ruby_formula(
     folder_tree = get_folder_structure(repo_dir)
 
     # Set tag.
-    if tag is None:
+    if tag == 'latest':
         tag = get_latest_tag(repo_dir)
 
     # Get the hash.

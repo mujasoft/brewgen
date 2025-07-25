@@ -48,7 +48,7 @@ python3 brewgen.py -r /path/to/your/project -o /path/to/output/folder/project.rb
 ╭─ Options ──────────────────────────────────────────────────────────────────────────────────────────────────────╮
 │ --repo-dir            -r      TEXT  Location of where the repo is cloned. [default: None]                      │
 │ --output              -o      TEXT  Location of where to save formula file. [default: output.rb]               │
-│ --tag                 -t      TEXT  Release tag [default: None]                                                │
+│ --tag                 -t      TEXT  Release tag [default: latest]                                                │
 │ --model               -m      TEXT  Name of model. [default: llama3]                                           │
 │ --install-completion                Install completion for the current shell.                                  │
 │ --show-completion                   Show completion for the current shell, to copy it or customize the         │
