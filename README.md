@@ -10,7 +10,9 @@
 
 ## Why this exists?
 
-While working on my other project, vid2gif, I found it to be a genuinely handy tool and wanted to make it easily installable via Homebrew so others could benefit from it as well. To do that, I needed to create a Ruby formula file — but figuring out how to write one manually turned out to be time-consuming and frustrating. After struggling with scattered documentation and inconsistent guidance online, I turned to ChatGPT, which proved to be far more helpful and efficient. That experience sparked an idea: what if I could automate the process using an LLM to generate a solid starter formula? Not only would it streamline the workflow for me but it could also help others publish their tools with minimal friction.
+While working on my other project, vid2gif, I found it to be a genuinely handy tool and wanted to make it easily installable via Homebrew so others could benefit from it as well. To do that, I needed to create a Ruby formula file — but figuring out how to write one manually turned out to be time-consuming and frustrating. ßThat experience sparked an idea: what if I could automate the process using an LLM to generate a solid starter formula? 
+
+Not only would it streamline the workflow for me but it could also help others publish their tools with minimal friction.
 
 ## Features
 - Generates Homebrew formulae using local LLMs
