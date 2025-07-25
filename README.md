@@ -8,12 +8,17 @@
 
 **brewgen** is an AI-powered CLI tool that generates valid [Homebrew](https://brew.sh) formulae from GitHub projects — so you don't have to write them by hand.
 
+## Why this exists?
+
+While working on my other project, vid2gif, I found it to be a genuinely handy tool and wanted to make it easily installable via Homebrew so others could benefit from it as well. To do that, I needed to create a Ruby formula file — but figuring out how to write one manually turned out to be time-consuming and frustrating. After struggling with scattered documentation and inconsistent guidance online, I turned to ChatGPT, which proved to be far more helpful and efficient. That experience sparked an idea: what if I could automate the process using an LLM to generate a solid starter formula? Not only would it streamline the workflow for me but it could also help others publish their tools with minimal friction.
+
 ## Features
 - Generates Homebrew formulae using local LLMs
 - Automatically extracts metadata from GitHub repos
 - Computes and injects accurate SHA256
 - Adds a test block and install instructions
 - Clean, colorful Rich output
+- Completely local
 
 ## Demo
 
@@ -21,8 +26,14 @@
 
 ## Usage
 
+
+### Step 1: Start a LLM.
 ```bash
-python3 main.py -r /path/to/your/project
+ollama run llama3
+```
+### Step 2: Run brewgen
+```bash
+python3 brewgen.py -r /path/to/your/project -o /path/to/output/folder/project.rb
 ```
 
 ### Options:
@@ -47,18 +58,17 @@ python3 main.py -r /path/to/your/project
 
 ```
 
-| Field       | Value |
+| Option       | Description |
 |-------------|-------|
-| **--repo-dir**        | `Location of where your repo is located. E.g. /path/to/my/repo.` |
-| **--output** | Location of where to save ruby formula. Default: output.rb |
+| **--repo-dir**        | Location of where your repo is located. E.g. `/path/to/my/repo.` |
+| **--output** | Location of where to save ruby formula. Default: `output.rb` |
 | **--tag**     | Specific tag to use. Defaults to getting latest. |
-| **--model**  | v1.0.1 |
+| **--model**  | Name of model. Defaults to `llama`. |
 
 ## Requirements
 
 - [Ollama](https://ollama.com)
 - Python 3.9+
-- ollama
 - requests
 - typer[all]
 - rich
@@ -78,6 +88,10 @@ python3 main.py -r /path/to/your/project
 
 This project uses an LLM. Please review the generated formula manually before publishing or submitting to Homebrew/core.
 
+## Limitation(s)
+
+- Output is not always consistent even while using the same LLM.
+- Output is mostly correct. Manual verification is required.
 
 ## License
 
